@@ -159,6 +159,7 @@
       ]
     ]
   },
+  "homepage": "./",
   "devDependencies": {
     "@babel/plugin-proposal-pipeline-operator": "^7.12.13"
   }
