@@ -77,7 +77,10 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "no-unused-expressions": "off"
+    }
   },
   "browserslist": {
     "production": [
@@ -146,6 +149,17 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-pipeline-operator",
+        {
+          "proposal": "minimal"
+        }
+      ]
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-pipeline-operator": "^7.12.13"
   }
 }
