@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+:root {
+  --thickness: 1rem;
+  --length: 3rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.squaring-game-app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.players {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.players > div {
+  padding: 0.25rem;
+  text-align: center;
+}
+.winner {
+  margin: 1rem 0 0 0;
+  padding: 0.25rem 0.8rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.line {
+  display: flex;
+}
+.line > div {
+  display: inline-block;
+}
+.dot {
+  background: black;
+  width: var(--thickness);
+  height: var(--thickness);
+}
+.cell {
+  filter: brightness(1.1);
+  width: var(--length);
+  height: var(--length);
+}
+.horizonal {
+  background: gray;
+  width: var(--length);
+  height: var(--thickness);
+}
+.vertical {
+  background: gray;
+  width: var(--thickness);
+  height: var(--length);
+}
+
+.horizonal:hover, .vertical:hover, .dot:hover, .cell:hover {
+  filter: brightness(1.25);
 }
